@@ -25,7 +25,7 @@ const ninja = {
      return "Hi, My name is " + name + ".";
 },
 
-    powers(ability){
+    sharinga(ability){
      return "To become a ninja you must " + ability + ".";
 
 },
@@ -59,7 +59,7 @@ class Ninja {
     return "Hi, My name is " + this.nameInsideNinja + ".";
     }
   
-   powers(){
+   sharinga(){
     return "Using " + this.ability + "Sharinga";
 
     }
@@ -75,10 +75,22 @@ class Ninja {
 
 
 // OOP inheritance: object inherit from classes
-let itachi = new Ninja("Itachi", "Magenko", "Fire", "Upside Down Knife Throw");
 
-display(itachi.Jutsu())
-display(itachi.name())
-display(itachi.melee())
-display(itachi.powers())
+//display(itachi.Jutsu())
+//display(itachi.name())
+//display(itachi.melee())
+//display(itachi.powers())
 
+// OOP polymorphin override shared behavior from parents
+class UchihaGod extends Ninja {
+    constructor(name, ability, style, move){
+        super(name, ability, style, move)
+        this.village = "Hidden leaf"
+    }
+
+    combo(){
+        return "Activate: " + super.sharinga() + "Combo with" + super.melee();
+    }
+}
+
+let itachi = new UchihaGod("Itachi", "Magenko", "Fire", "Upside Down Knife Throw");
