@@ -76,10 +76,10 @@ class Ninja {
 
 // OOP inheritance: object inherit from classes
 
-//display(itachi.Jutsu())
-//display(itachi.name())
-//display(itachi.melee())
-//display(itachi.powers())
+display(itachi.Jutsu())
+display(itachi.name())
+display(itachi.melee())
+display(itachi.powers())
 
 // OOP polymorphin override shared behavior from parents
 class UchihaGod extends Ninja {
@@ -94,3 +94,7 @@ class UchihaGod extends Ninja {
 }
 
 let itachi = new UchihaGod("Itachi", "Magenko", "Fire", "Upside Down Knife Throw");
+
+display(itachi.name())
+display(itachi.village)
+display(itachi.combo());
